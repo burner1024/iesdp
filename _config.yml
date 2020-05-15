@@ -28,6 +28,13 @@ sass:
 collections:
 - opcodes
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+
 defaults:
   -
     scope:
