@@ -35,7 +35,5 @@ defaults:
     values:
       layout: "default"
 
-exclude: [vendor]
-
 plugins:
   - jekyll-liquify
