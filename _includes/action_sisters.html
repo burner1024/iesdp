@@ -33,7 +33,7 @@
 
           {%- if sa[game] == 1 -%}
             {%- if g == game -%}
-            <span class="avariant_current">{{- g | upcase -}}</span>
+            <span class="avariant_current" title="Current variant">{{- g | upcase -}}</span>
             {%- else -%}
               <span class="avariant_same"><a href="{{ href }}" title="{{ g | upcase }} version is identical to this one">{{- g | upcase -}}</a></span>
             {%- endif -%}
