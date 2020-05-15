@@ -12,9 +12,9 @@ description: >
   The IESDP (Infinity Engine Structures Description Project) is an effort
   to research the workings of the Bioware Infinity Engine(R), and act as a
   collective resource for those interested in such workings.
-baseurl: "/iesdp" # the subpath of your site, e.g. /blog
-url: "https://gibberlings3.github.io"
-fullurl: "https://gibberlings3.github.io/iesdp"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://iesdp.bgforge.net"
+fullurl: "https://iesdp.bgforge.net"
 github_url:  "https://github.com/gibberlings3/iesdp/"
 github_archive:  "https://github.com/gibberlings3/iesdp/archive/gh-pages.zip"
 g3_forum: "https://www.gibberlings3.net/forums/forum/54-iesdp-updates-and-info/"
