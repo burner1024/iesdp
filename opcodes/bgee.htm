@@ -13829,7 +13829,7 @@ When creating an image for use as in Mislead, the image will have a script assig
 <br/>0   Talkative, uncontrollable
 <br/>1   Can not attack, can not cast spells (Mislead.spl is cast on the creature)
 <br/>2   Can attack, can not cast spells (ProjImag.spl is cast on the creature)
-<br/>3   Can attack, can cast spells (Simulacrs.pl is cast on the creature)
+<br/>3   Can attack, can cast spells (Simulacr.spl is cast on the creature)
 <br/>4+  As 0
 
 
@@ -13841,6 +13841,7 @@ Keep in mind that if the caster is equipped with an irremovable item (e.g., Edwi
 
   </div>
 </div>
+
  </div>
 		<hr />
 
@@ -14661,7 +14662,7 @@ It will always apply to both main and offhand weapon.
 <div class="note info">
   <div>
     <strong>Note:</strong> 
-At least in EEs, this opcode applies its effect inbetween base weapon damage and the on-hit effects of the weapon.
+This opcode applies its effect inbetween base weapon damage and the on-hit effects of the weapon.
 
   </div>
 </div>
@@ -15729,6 +15730,18 @@ All timing modes act as permanent for this effect.
 
   </div>
 </div>
+
+
+
+
+<div class="note warning">
+  <div>
+    <strong>Warning:</strong> 
+Make sure to set target. Target: Self (1) works well. If target is unset (0), the game will freeze.
+
+  </div>
+</div>
+
  </div>
 		<hr />
 
@@ -18918,7 +18931,11 @@ It does not alter the duration of the <a href="#op25">poison</a>, nor does it af
 		<span class="parameterheading">Parameter #2:</span>			<span class="parameterdata">Type</span><br />
 
 		
+			<span class="parameterheading">Parameter #3:</span> <span class="parameterdata">Starting strref</span><br />
 		
+		
+		
+			<span class="parameterheading">Special:</span> <span class="parameterdata">Count</span><br />
 		
 
 		<div class="descriptionheading">Description:</div>
@@ -18935,6 +18952,11 @@ About Cynicism option:
 	<li>Triggers at random intervals throughout its duration.</li>
 	<li>Maintains <a href="../files/ids/bgee/splstate.htm">SPLSTATE</a>[255|CYNICISM_EQUIPPED] on the targeted creature(s).</li>
 </ul>
+
+
+If used from an external effect (.eff), 'Strref' is set to 0 and 'Type' to 1, the third parameter will
+dictate the first strref and 'Special' will dictate the count. Then the number of lines of 'Special' will
+be displayed starting with the strref in 'Starting strref'.
 
 
 
@@ -18999,16 +19021,10 @@ It is possible to colorize the string. In order to do so, follow the instruction
 <div class="note info">
   <div>
     <strong>Note:</strong> 
-<table>
-  <tbody>
-    <tr>
-      <td>As far as the <a href="../files/ids/bgee/ea.htm">allegiance</a> of the summoned creatures is concerned, this opcode uses “Match Target”, which sets the summoned creature’s allegiance to one of [4</td>
-      <td>Ally], [128</td>
-      <td>Neutral], or [255</td>
-      <td>Enemy], based on the summoner (whichever group the summoner belongs to).</td>
-    </tr>
-  </tbody>
-</table>
+As far as the <a href="../files/ids/bgee/ea.htm">allegiance</a> of the summoned creatures
+is concerned, this opcode uses “Match Target”, which sets the summoned creature’s
+allegiance to one of 4 (Ally), 128 (Neutral), or 255 (Enemy), based on the
+summoner (whichever group the summoner belongs to).
 
   </div>
 </div>
